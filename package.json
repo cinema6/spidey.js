@@ -1,0 +1,23 @@
+{
+  "name": "spidey.js",
+  "version": "0.0.0",
+  "description": "Crawls a webpage for social media links.",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cinema6/spidey.js.git"
+  },
+  "keywords": [
+    "social",
+    "scraper"
+  ],
+  "author": "ReelContent, Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cinema6/spidey.js/issues"
+  },
+  "homepage": "https://github.com/cinema6/spidey.js"
+}
