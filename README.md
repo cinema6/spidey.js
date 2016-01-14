@@ -43,8 +43,13 @@ Globally reconfigures `spidey()` to scrape for new configured links (in addition
         // Will search for friendster social links by
         // first searching for links that contain
         // "friendster.com" and then searching for links
-        // that contain "friendst.er."
-        "friendster": ["friendster.com", "friendst.er"],
+        // that contain "friendst.er." Will not include any
+        // links that contain "/share/".
+        "friendster": [
+            "friendster.com",
+            "friendst.er",
+            "!/share/"
+        ],
 
         // Reconfigures the Facebook link lookup to also
         // search for links that contain "fb.me."

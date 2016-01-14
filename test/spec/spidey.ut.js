@@ -92,8 +92,8 @@ describe('spidey(uri, options)', function() {
 
         it('should scrape the links from the HTML', function() {
             expect(scrapeLinks).toHaveBeenCalledWith(html, {
-                facebook: ['facebook.com'],
-                twitter: ['twitter.com'],
+                facebook: ['facebook.com', '!/sharer/'],
+                twitter: ['twitter.com', '!/intent/'],
                 instagram: ['instagram'],
                 youtube: ['youtube.com/user'],
                 pinterest: ['pinterest.com'],
@@ -177,7 +177,7 @@ describe('spidey(uri, options)', function() {
         it('should scrape the links with the specified config', function() {
             expect(scrapeLinks).toHaveBeenCalledWith(html, {
                 facebook: ['fb.com', 'facebook.com'],
-                twitter: ['twitter.com'],
+                twitter: ['twitter.com', '!/intent/'],
                 instagram: ['instagram'],
                 youtube: ['youtube.com/user'],
                 pinterest: ['pinterest.com'],
