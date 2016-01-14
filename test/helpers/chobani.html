@@ -1,0 +1,390 @@
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" itemscope itemtype="http://schema.org/Organization"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" itemscope itemtype="http://schema.org/Organization"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" itemscope itemtype="http://schema.org/Organization"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10" itemscope itemtype="http://schema.org/Organization"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" itemscope itemtype="http://schema.org/Organization"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQAGVFZXGwABVFZSBQM="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:20,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(3),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(4),t(5),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:8,3:3,4:7,5:6,6:21,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:21,2:22,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:22,2:21,ee:"QJf3ax"}],7:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:22,2:21,ee:"QJf3ax"}],8:[function(t,e){function n(){u.inPlace(this,p,"fn-")}function r(t,e){u.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),u=c(a),f=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,u.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:5,2:22,ee:"QJf3ax"}],9:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=n(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=n(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var f=0;c>f;f++)e.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:10,3:8,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],10:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],11:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:20,2:21,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===f.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=u.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),u=c.document,f=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:f,features:{}};u.addEventListener?(u.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(u.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:20,2:11,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],20:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],21:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],22:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:21,ee:"QJf3ax"}]},{},["G9z0Bl",4,9]);</script>
+    <meta name="google-site-verification" content="KlMiXNlVS1tOBBm7DYisE_Ko6qLCUCTOblgcGJxHIt8" />
+        <title>Chobani - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+    <meta name="keywords" content="Chobani Greek Yogurt, Chobani not genetically modified, America's number one Greek yogurt" />
+    <meta name="description" content="America's number one Greek yogurt made the right way and not genetically modified (non-GMO), with only natural ingredients and natural sweeteners." />
+
+    <meta property="og:title" content="Chobani - Home" />
+    <meta property="og:site_name" content="Chobani" />
+    <meta property="og:image" content="http://www.chobani.com/img/share/facebook_share.jpg"/>
+    <meta property="og:description" content="America's number one Greek yogurt made the right way and not genetically modified (non-GMO), with only natural ingredients and natural sweeteners." />
+
+    
+        <!-- build:css /css/fonts.css -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.chobani.com/prod/chobani.com/css/fonts.css" />
+    <!-- endbuild -->
+    
+     
+   
+
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-nutrition.css" />
+    <link rel="stylesheet" type="text/css" href="/css/flexslider.css" />
+    <link rel="stylesheet" type="text/css" href="/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="/css/main-nutrition.css" />
+    
+
+
+    <link rel="stylesheet" type="text/css" href="/js/lib/owl/assets/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="/js/lib/owl/assets/owl.theme.default.min.css" />
+
+   <link rel="stylesheet" type="text/css" href="/js/lib/slick/slick.css" />
+   <link rel="stylesheet" type="text/css" href="/js/lib/slick/slick-theme.css" />
+        <!-- build:css /css/style.min.css -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.chobani.com/prod/chobani.com/css/style.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/extra.css" />
+    <!-- endbuild -->
+    <script src="http://cdn.chobani.com/prod/chobani.com/js/lib/modernizr/modernizr.custom.js"></script>
+        <!--[if lt IE 10]>
+    <script src="http://cdn.chobani.com/prod/chobani.com/js/lib/respond/respond.js"></script>
+    <link href="http://cdn.chobani.com/prod/chobani.com/js/lib/respond/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
+    <link href="/js/lib/respond/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+    <script src="/js/lib/respond/respond.proxy.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="http://fast.fonts.net/jsapi/0d92dd49-8a14-4904-9229-b454a74ecb91.js"></script>
+  <script src="https://use.typekit.net/non5zjb.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+        <script type="text/javascript">
+    <!--
+        function toggle_hrbngr_visibility(id) {
+           var e = document.getElementById(id);
+              menumodelclick.style.display = 'none';
+              e.style.display = 'block';
+        }
+    //-->
+    </script>   
+</head>  <body id="home">
+    <header>
+        <nav id="nav-main">
+    <h1><a href="/" data-track="home">Chobani<sup>&reg;</sup></a></h1>
+    <a id="mobile-nav-toggle" href="#"><span></span></a>
+    <ul>
+        <li class="">
+            <a href="/beliefs" data-track="story" data-id="chobaniStory" class="down-arrow ">Chobani Way</a>
+            <ul class="nav-sub story">
+                <li><a href="/beliefs" class="" data-track="beliefs">Beliefs</a></li>
+                <li><a href="/our-craft" class="" data-track="craft">Craft</a></li>
+                <li><a href="/history" class="" data-track="history">History</a></li>                
+                <li><a href="/foundation" class="" data-track="foundation">Foundation</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/products" data-track="products" class="">Products</a>
+        </li>
+        <li class="">
+            <a href="/culture" data-track="culture" data-id="culture" class="down-arrow ">Culture</a>
+            <ul class="nav-sub culture">
+                <li><a class="" href="/culture" data-track="culture_recipes">Overview</a></li>
+                <li><a class="" href="/culture/recipes" data-track="culture_recipes">Recipes</a></li>
+                <li><a class="" href="/culture/chobani-soho" data-track="culture_soho">Chobani SoHo</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/contactus" data-track="findus" class="down-arrow ">Find Us</a>
+            <ul class="nav-sub findus">
+                <li><a class="" href="/contactus" data-track="contact_us">Contact Us</a></li>
+                <li><a class="" href="/product-locator" data-track="product_locator">Product Locator</a></li>                
+            </ul>
+        </li>
+        <li class="share">
+            <p>Share<span class="colon">:</span><span class="show">+</span><span class="hide">-</span></p>
+            <ul>
+                <li class="share-fb"><a href="http://www.facebook.com/sharer/sharer.php?m2w&s=100&p%5Burl%5D=www.chobani.com&p%5Bimages%5D%5B0%5D=http://www.chobani.com/img/share/facebook_share.jpg&p%5Btitle%5D=Chobani%20-%20How%20Matters%E2%84%A2&p%5Bsummary%5D=Authentic%20strained%20Greek%20yogurt%20made%20the%20right%20way,%20with%20only%20natural%20ingredients%20and%20never%20any%20preservatives.%20Find%20out%20why%20How%20Matters%26trade;%20at%20Chobani.com" target="_blank" data-track="share_fb">Share on Facebook</a><span></span></li>
+                <li class="share-tw"><a href="https://twitter.com/intent/tweet?text=How%20your%20food%20is%20made%20matters.%20Support%20%40Chobani%20and%20the%20%23howmatters%20cause%21%20http%3A%2F%2Fcho.ba%2Fhowmatters&source=webclient" target="_blank" data-track="share_tw">Share on Twitter</a><span></span></li>
+                <li class="share-gp"><a href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://www.chobani.com/" target="_blank" data-track="share_gp">Share on Google+</a><span></span></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+        <div id="home-carousel" class="carousel">
+            <ul class="page-list">
+                <li class="simply" id="slide_1">
+                   <div class="inner_right">
+                    <h1 class="home_slide_heading">The Only <br />100-Calorie Yogurt Sweetened Naturally.</h1>
+                                        <a href="http://www.thelightthatsright.com/#get-coupon" class="ga_click home_watch_film_link_b newslidebutton button">LEARN MORE AND GET A <br />$1 OFF COUPON <span class="arrow_move"></span></a>
+                                        </div>                
+                </li>
+                <li class="simply-2" id="slide_1">
+                    <div class="inner_center">
+                        <h1 class="home_slide_heading">Chobani Simply 100<sup>&reg;</sup> Is The Only 100-Calorie Greek Yogurt  With Zero Artificial Sweeteners or Preservatives*</h1>
+                        <button href="http://youtu.be/zhebIGeFa-8"  rel="hp-hero_morning-tout" class="ga_click  home_watch_film_link newslidebutton button" data-id="zhebIGeFa-8"  data-track='baseball-flip'><span></span>WATCH THE FILM<span class="arrow_move arrow_move"></span></button>
+                        <span class="disclaimer">*Refers to nationally distributed brands</span>
+                    </div>
+                    <video preload="auto" autoplay loop style="position:relative;">
+                        <source src="/video/chobani-fruitstand-loop.mp4" type="video/mp4" media="all and (min-width:668px)">
+                    </video>
+                </li>
+                 <li class="seasonal" id="slide_4">
+                    <div class="inner_center lower">
+                        <a href="/products/blended#maple" class="ga_click newslidebutton button">SHOW ALL FLAVORS <span class="arrow_move"></span></a></div>
+                </li>
+
+                <li class="seasonal-winter" id="slide_2">
+                    <div class="inner_center lower">
+                        <a href="/products/flip#peppermint-perfection" class="ga_click newslidebutton button">SHOW ALL FLAVORS <span class="arrow_move"></span></a>
+                    </div>
+                </li>
+                <!--
+                <li class="flip" id="slide_2">
+                    <div class="inner_center">
+                        <h1 class="home_slide_heading">It's The Break You Make.</h1>
+                        <a href="/products/flip#pumpkin-harvest-crisp" class="ga_click home_watch_film_link button">SHOW ME MORE <span class="arrow_move"></span></a>                    
+                    </div>
+                </li>
+                -->
+                 <li class="core" id="slide_3">
+                    <div class="inner_center">
+                        <h1 class="home_slide_heading">Simple Is Real.</h1>
+                        <!--<a href="https://www.youtube.com/watch?v=Rd4Pw0OgrQE"  rel="hp-hero_cowboy-tout" class="ga_click home_watch_film_link_b newslidebutton button" target=_blank data-track='cowboy'><span></span>TAKE ME THERE<span class="arrow_move arrow_move"></span></a>-->
+                        <a href="/products/fruit-on-the-bottom#peach" class="ga_click newslidebutton button">SHOW ME MORE <span class="arrow_move"></span></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+<div id="slide_strip_container_wrapper">
+       <div id="slider_strip_4" class="slide_strip_container" style="display:none;">
+                                         <div><a href="/products/blended#maple"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/blended/blended-maple-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/blended#maple"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/blended/blended-apple-cinnamon-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/blended#maple"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/blended/blended-coffee-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/blended#maple"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/blended/blended-mixed-berry-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/blended#maple"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/blended/blended-non-fat-plain-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/blended#maple"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/blended/blended-coconut-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/blended#maple"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/blended/blended-key-lime-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/blended#maple"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/blended/blended-non-fat-vanilla-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/blended#maple"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/blended/blended-non-fat-lemon-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/blended#maple"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/blended/blended-plain-53oz.png" id=""  style=""/></a></div>
+                </div>
+
+
+        <div id="slider_strip_1" class="slide_strip_container">
+                                    <div><a href="/products/simply-100"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/simply/simply100-mixed-red-berry-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/simply-100"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/simply/simply100-strawberry-banana-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/simply-100"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/simply/simply100-strawberry-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/simply-100"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/simply/simply100-blueberry-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/simply-100"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/simply/simply100-peach-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/simply-100"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/simply/simply100-vanilla-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/simply-100"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/simply/simply100-black-cherry-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/simply-100"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/simply/simply100-raspberry-lemon-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/simply-100"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/simply/simply100-key-lime-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/simply-100"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/simply/simply100-mango-passionfruit-53oz.png" id=""  style=""/></a></div>
+                </div>
+  
+        <div id="slider_strip_2" class="slide_strip_container" style="display:none;" >
+                                    <div><a href="/products/flip"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/flip/flips-peppermint-perfection-flip.png" id=""  style=""/></a></div>
+                    <div><a href="/products/flip"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/flip/flips-sriracha-mango-flip.png" id=""  style=""/></a></div>
+                    <div><a href="/products/flip"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/flip/flips-chipotle-pineapple-flip.png" id=""  style=""/></a></div>
+                    <div><a href="/products/flip"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/flip/flips-pbj-flip.png" id=""  style=""/></a></div>
+                    <div><a href="/products/flip"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/flip/flips-peanut-butter-dream-flip.png" id=""  style=""/></a></div>
+                    <div><a href="/products/flip"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/flip/flips-almond-coco-loco-flip.png" id=""  style=""/></a></div>
+                    <div><a href="/products/flip"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/flip/flips-key-lime-crumble-flip.png" id=""  style=""/></a></div>
+                    <div><a href="/products/flip"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/flip/flips-salted-caramel-crunch-flip.png" id=""  style=""/></a></div>
+                    <div><a href="/products/flip"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/flip/flips-chocolate-haze-craze-flip.png" id=""  style=""/></a></div>
+                    <div><a href="/products/flip"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/flip/flips-coffee-break-bliss-flip.png" id=""  style=""/></a></div>
+                    <div><a href="/products/flip"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/flip/flips-nutty-for-nana-flip.png" id=""  style=""/></a></div>
+                    <div><a href="/products/flip"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/flip/flips-tropical-escape-flip.png" id=""  style=""/></a></div>
+                </div>
+        <div id="slider_strip_3" class="slide_strip_container" style="display:none; " >
+                                         <div><a href="/products/fruit-on-the-bottom"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/fob/fob-non-fat-blueberry-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/fruit-on-the-bottom"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/fob/fob-non-fat-strawberry-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/fruit-on-the-bottom"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/fob/fob-non-fat-peach-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/fruit-on-the-bottom"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/fob/fob-non-fat-raspberry-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/fruit-on-the-bottom"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/fob/fob-non-fat-black-cherry-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/fruit-on-the-bottom"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/fob/fob-low-fat-pineapple-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/fruit-on-the-bottom"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/fob/fob-low-fat-strawberry-banana-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/fruit-on-the-bottom"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/fob/fob-non-fat-blackberry-53oz.png" id=""  style=""/></a></div>
+                    <div><a href="/products/fruit-on-the-bottom"><img src="http://cdn.chobani.com/prod/chobani.com/img/carousel/fob/fob-low-fat-mango-53oz.png" id=""  style=""/></a></div>
+                </div>
+        
+</div>
+
+   
+    </header>
+    <style>
+
+    #slide_strip_container_wrapper {
+        overflow: hidden;
+        background-color:#fff;
+        height: 100px;
+        /*
+        background-color: red;
+        position: relative;
+*/
+    }
+
+    .slide_strip_container  {
+        text-align: center;
+        background-color:#fff;
+        width: 100%;
+        overflow: hidden;
+        /* display:none;
+       
+        position: absolute;
+        top: 0;
+        left: 0;
+        */
+    }
+
+ 
+.slide_strip_container div {
+    display:inline-block;
+}
+.sup { vertical-align: super; font-size:20px;}
+    .owl-stage {
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+    /*
+    .owl-stage img {
+        max-width: 100px;
+        height: auto;
+    }*/
+
+    </style>
+    <section id="section2and3">
+        <section class="grid half left" id="section2" style="position: relative;">
+                        
+            <a href="http://www.chobani.com/products/flip#almond-coco-loco" style="display:inline-block; width:100%;height: 100%;position: relative;">
+                <div style="border:1px solid #c3aca6;width: 90%;height: 90%;" class="tout_inner_border">
+                
+            <div class="lower_inner" style="position: absolute; bottom: 10px;text-align: center;width: 100%;">
+                <h1 style="">Love This Life<span class="sup">&trade;</span></h1>
+            </div>
+         
+           </div>
+        </a>
+        </section>
+        <section class="grid half right" id="section3" style="position: relative;">
+                       <a href="http://www.chobani.com/products/flip" style="display:inline-block; width: 100%; height: 100%;position: relative;">
+            <div style="border:1px solid #ffffff;width: 90%;height: 90%;" class="tout_inner_border">
+           <div class="upper_inner" style="position: absolute; top: 100px;text-align: center;width: 100%;">
+          <h1 style="margin-bottom: 5px;">IT'S THE BREAK</h1><h1 style="margin-bottom: 20px;">YOU MAKE</h1>
+       </div>
+   </div>
+   </a>
+        </section>
+        <div class="clear"></div>
+    </section>
+    <section class="grid" id="section4">
+        <div class="inner">
+            <div class="content">
+                <h2>Our Craft</h2>
+                <p>How we make our yogurt matters, from farm to fridge.</p>
+                <a href="/our-craft" class="button" data-track="general_tout" data-tout="our-craft">Learn more <span class="arrow_move"></span></a>
+            </div>
+        </div>
+    </section>
+    <section class="grid" id="section5">
+        <div class="inner">
+            <div class="right">
+                <h3>Use Chobani<sup>®</sup> yogurt in your </h3>
+                <h2 id="recipeName">PENNE PASTA</h2>
+                <p id="description">
+                    Featuring a savory combination of sun-dried tomatoes and spinach, this Baked Penne elevates the everyday classic, taking cheesy pasta to a whole new level.  Your dinner guests won't know what hit them. #MadeWithChobani </p>
+                    <a href="http://www.chobani.com/culture/recipes/baked-penne-with-spinach-and-sundried-tomato/" class="button" data-track="recipe_tout" data-tout="BAKED PENNE PASTA">Get the recipe <span class="arrow_move"></span></a>
+                </div>
+            </div>
+        </section>
+        <section class="touts">
+            <section class="tout" id="tout-soho">
+    <div class="inner">
+        <h2>Chobani SoHo<sup class="service-mark"> SM</sup></h2>
+        <p>Stop by the SoHo café, and experience our Greek yogurt like you never have before.</p>
+        <a href="/culture/chobani-soho"
+           class="button" data-track="general_tout" data-tout="chobani-soho">See More <span class="arrow_move"></span></a>
+    </div>
+</section>            <section class="tout" id="tout-history">
+    <div class="inner">
+        <h2>Our History</h2>
+        <p>We're proud to be America&rsquo;s #1 Greek Yogurt.</p>
+        <a href="/history"
+           class="button" data-track="general_tout" data-tout="history">See How <span class="arrow_move"></span></a>
+    </div>
+</section>        </section>
+        <footer>
+    <div class="top">
+        <div class="inner">
+            <nav>
+                <div class="left">
+                    <ul>
+
+                        <li><a href="/careers" data-track="careers">Careers</a></li>                        
+                        <li><a href="/contactus" data-track="contact-us">Contact Us</a></li>                        
+                        <li><a href="/blog" data-track="blog">Blog</a></li>
+                        <li><a href="/faqs" data-track="faq">FAQ</a></li>
+                        <li class="last"><a href="/media" data-track="media">Media</a></li>
+
+                    </ul>
+                    <ul class="social">
+                        <li class="visit-header">Visit Us:</li>
+                        <li class="last">
+                            <a href="https://www.facebook.com/Chobani" data-track="visit_fb" class="visit-fb" target="_blank">Visit Facebook</a>
+                            <a href="https://twitter.com/Chobani" data-track="visit_tw" class="visit-tw" target="_blank">Visit Twitter</a>
+                            <a href="https://plus.google.com/105549919806722403002/posts" data-track="visit_gp" class="visit-gp" target="_blank">Visit Google+</a>
+                            <a href="https://foursquare.com/chobani" data-track="visit_fs" class="visit-fs" target="_blank">Visit Foursquare</a>
+                            <a href="http://www.pinterest.com/chobani/" data-track="visit_pin" class="visit-pin" target="_blank">Visit Pinterest</a>
+                            <a href="http://instagram.com/chobani/" data-track="visit_insta" class="visit-insta" target="_blank">Visit Instagram</a>
+                            <a href="http://www.youtube.com/user/ChobaniYogurt" data-track="visit_yt" class="visit-yt" target="_blank">Visit Youtube</a>
+                            <a href="http://madewithchobani.tumblr.com/" data-track="visit_tumblr" class="last visit-tumblr" target="_blank">Visit Tumblr</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <span class="notification">Sign up for our Newsletter</span>
+
+                    <a href="/newsletter/" class="button" data-track="newsletter"><span class="icon mail"></span>Keep in touch</a>
+
+                </div>
+                <div class="clear"></div>
+            </nav>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="inner">
+            <div id="legal">
+                <div class="left">
+                    <p class="logo-olympic">Chobani<sup>&reg;</sup> Proud Sponsor of Team USA</p>
+                </div>
+                <div class="right">
+                    <span class="copy">&copy; 2016 Chobani, LLC</span><span class="pipe first"> |</span>
+                    <a href="/terms/" data-track="termsandconditions">Terms &amp; Conditions</a> <span class="pipe second">|</span>
+                    <a href="/legal-regulatory-compliance/" data-track="legal">Legal<span class="regText"> &amp; Regulatory Compliance</span></a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</footer>        
+        <script type="text/javascript">
+var _gaq = _gaq || []; 
+_gaq.push(['_setAccount', 'UA-10862371-9']); 
+
+(function() { 
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; 
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
+})(); 
+</script>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TXW48X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TXW48X');</script>
+<!-- End Google Tag Manager -->
+<script data-main="/js/main.js" src="/js/lib/requirejs/require.js"></script>    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"644f8ad466","applicationID":"3107022","transactionName":"YVcEY0FTD0tYVhZYWlgdM0VaHQhWXVAaH0VeQg==","queueTime":0,"applicationTime":5,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-632.min.js"}</script></body>
+    </html>

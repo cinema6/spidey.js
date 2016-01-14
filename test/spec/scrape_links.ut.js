@@ -3,7 +3,7 @@ var fs = require('fs');
 describe('scrapeLinks(html, config)', function() {
     var scrapeLinks;
 
-    var baileys, pennzoil, toyota;
+    var baileys, pennzoil, toyota, chobani;
 
     var config;
 
@@ -15,10 +15,11 @@ describe('scrapeLinks(html, config)', function() {
         baileys = fs.readFileSync(require.resolve('../helpers/baileys.html')).toString();
         pennzoil = fs.readFileSync(require.resolve('../helpers/pennzoil.html')).toString();
         toyota = fs.readFileSync(require.resolve('../helpers/toyota.html')).toString();
+        chobani = fs.readFileSync(require.resolve('../helpers/chobani.html')).toString();
 
         config = {
-            facebook: ['facebook.com', 'fb.co'],
-            twitter: ['twitter.com', 'tw.co'],
+            facebook: ['facebook.com', 'fb.co', '!/sharer/'],
+            twitter: ['twitter.com', 'tw.co', '!/intent/'],
             instagram: ['instagram.com', 'ig.co'],
             youtube: ['youtube.com', 'yt.co'],
             pinterest: ['pinterest.com', 'pin.it']
@@ -46,6 +47,13 @@ describe('scrapeLinks(html, config)', function() {
             instagram: 'http://ig.co/toyotausa/',
             youtube: 'http://www.youtube.com/user/ToyotaUSA',
             pinterest: null
+        });
+        expect(scrapeLinks(chobani, config)).toEqual({
+            facebook: 'https://www.facebook.com/Chobani',
+            twitter: 'https://twitter.com/Chobani',
+            instagram: 'http://instagram.com/chobani/',
+            youtube: 'http://www.youtube.com/user/ChobaniYogurt',
+            pinterest: 'http://www.pinterest.com/chobani/'
         });
     });
 });
